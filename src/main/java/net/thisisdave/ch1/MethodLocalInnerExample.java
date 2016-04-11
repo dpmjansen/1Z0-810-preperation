@@ -46,3 +46,22 @@ class Outer4 {
         i.seeOuter();
     }
 }
+
+class Outer5 {
+
+    public void doStuff(String value){
+        int num = 10; //Does not need to be final (had to be in SE7)
+
+        class Something {
+
+//            num = 3; <-- not allowed
+
+            Something(String value){
+                if(value.length() > num){
+                    System.out.println("Yup");
+                }
+            }
+        }
+
+    }
+}
